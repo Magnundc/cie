@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:07:12
+/* Smarty version 3.1.28, created on 2016-11-14 14:42:21
   from "/var/www/cie/application/modules/site/views/cursos/modal-delete.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829e130689c78_71200107',
+  'unifunc' => 'content_5829e96d018d81_92693726',
   'file_dependency' => 
   array (
     '7d698e6b69464311a05c8decb10fa960e0227569' => 
@@ -19,8 +19,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5829e130689c78_71200107 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '11878224805829e130686f41_38126026';
+function content_5829e96d018d81_92693726 ($_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '19538444515829e96d016050_22876048';
 ?>
 <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog"  aria-hidden="false">
     <div class="modal-dialog">

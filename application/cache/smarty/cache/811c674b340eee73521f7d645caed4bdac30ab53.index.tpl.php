@@ -1,23 +1,23 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:07:10
+/* Smarty version 3.1.28, created on 2016-11-14 14:40:33
   from "/var/www/cie/application/modules/site/views/listasegresso/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829e12ec86d19_29447750',
+  'unifunc' => 'content_5829e9011f8ab4_34061886',
   'file_dependency' => 
   array (
     '811c674b340eee73521f7d645caed4bdac30ab53' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/listasegresso/index.tpl',
-      1 => 1479138962,
+      1 => 1479140868,
       2 => 'file',
     ),
     'e1292f8b74a06a8cae3496ce7393f8577b691a09' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/layout/template.tpl',
-      1 => 1479139344,
+      1 => 1479141079,
       2 => 'file',
     ),
     'a4f9b94df5ef9cab96155636b109abaa7092f43a' => 
@@ -53,7 +53,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5829e12ec86d19_29447750 ($_smarty_tpl) {
+function content_5829e9011f8ab4_34061886 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -64,7 +64,7 @@ function content_5829e12ec86d19_29447750 ($_smarty_tpl) {
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="Nova Aplicação CREA-GO">
             <meta name="author" content="Magnun Dias Carvalho">
-            <title>CIE Cadastro de Instituição de Ensino</title>
+            <title>CIE - Cadastro de Instituição de Ensino</title>
 
             <meta name="mobile-web-app-capable" content="yes" />
             <link rel="icon" sizes="48x48" href="http://localhost/cie/public/icons/icon-48.png" />
@@ -138,7 +138,7 @@ function content_5829e12ec86d19_29447750 ($_smarty_tpl) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand" href="http://localhost/cie/">CIE Cadastro de Instituição de Ensino</a>
+            <a class="navbar-brand" href="http://localhost/cie/">CIE - Cadastro de Instituição de Ensino</a>
         </div>
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
@@ -222,8 +222,24 @@ function content_5829e12ec86d19_29447750 ($_smarty_tpl) {
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title">listasegresso</h1>
+                <h1 class="panel-title">Listas de Egressos</h1>
             </div>
+            
+            <div class="container">
+                <div class="row">
+		<div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="  search-query form-control" placeholder="Para pesquisar digite um dado do egresso" />
+                                <span class="input-group-btn">
+                                    <button class="btn" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            
             <div class="panel-body table-container">
                 
 <table class="table table-condensed table-bordered">

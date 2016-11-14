@@ -7,7 +7,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="Nova Aplicação CREA-GO">
             <meta name="author" content="Magnun Dias Carvalho">
-            <title>{block name="title"}CIE Cadastro de Instituição de Ensino{/block}</title>
+            <title>{block name="title"}CIE - Cadastro de Instituição de Ensino{/block}</title>
 
             <meta name="mobile-web-app-capable" content="yes" />
             <link rel="icon" sizes="48x48" href="{base_url}/public/icons/icon-48.png" />
@@ -81,7 +81,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand" href="{base_url}/">CIE Cadastro de Instituição de Ensino</a>
+            <a class="navbar-brand" href="{base_url}/">CIE - Cadastro de Instituição de Ensino</a>
         </div>
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">

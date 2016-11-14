@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 13:57:37
+/* Smarty version 3.1.28, created on 2016-11-14 14:51:31
   from "/var/www/cie/application/modules/site/views/home/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829def12810d2_39495209',
+  'unifunc' => 'content_5829eb930a20d1_23598517',
   'file_dependency' => 
   array (
     '418e5defb934a2da73d2fc6331d419db1a47c3b4' => 
@@ -17,13 +17,13 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'e1292f8b74a06a8cae3496ce7393f8577b691a09' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/layout/template.tpl',
-      1 => 1479139052,
+      1 => 1479141079,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5829def12810d2_39495209 ($_smarty_tpl) {
+function content_5829eb930a20d1_23598517 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -34,7 +34,7 @@ function content_5829def12810d2_39495209 ($_smarty_tpl) {
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="Nova Aplicação CREA-GO">
             <meta name="author" content="Magnun Dias Carvalho">
-            <title>CIE Cadastro de Instituição de Ensino</title>
+            <title>CIE - Cadastro de Instituição de Ensino</title>
 
             <meta name="mobile-web-app-capable" content="yes" />
             <link rel="icon" sizes="48x48" href="http://localhost/cie/public/icons/icon-48.png" />
@@ -108,15 +108,17 @@ function content_5829def12810d2_39495209 ($_smarty_tpl) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand" href="http://localhost/cie/">CIE Cadastro de Instituição de Ensino</a>
+            <a class="navbar-brand" href="http://localhost/cie/">CIE - Cadastro de Instituição de Ensino</a>
         </div>
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="instituicoes"><i class="fa icon-link"></i> Insituições</a>
-                        <a href="http://localhost/cie/#1"><i class="fa icon-link"></i> Link 1</a>
-                        <a href="http://localhost/cie/#1"><i class="fa icon-link"></i> Link 1</a>
+                        <a href="instituicoes"><i class="glyphicon glyphicon-chevron-right"></i> Insituições</a>
+                        <a href="contatos"><i class="glyphicon glyphicon-chevron-right"></i> Contatos</a>
+                        <a href="cursos"><i class="glyphicon glyphicon-chevron-right"></i> Cursos</a>
+                        <a href="grades"><i class="glyphicon glyphicon-chevron-right"></i> Grades</a>
+                        <a href="listasegresso"><i class="glyphicon glyphicon-chevron-right"></i> Listas de Egressos</a>
                     </li>
                 </ul>
             </div>

@@ -1,23 +1,23 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:07:11
+/* Smarty version 3.1.28, created on 2016-11-14 14:40:32
   from "/var/www/cie/application/modules/site/views/grades/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829e12fcaeb65_39865481',
+  'unifunc' => 'content_5829e900ae9423_80044744',
   'file_dependency' => 
   array (
     '7f04bee671dbb8eee81c482a1e1589d259edf458' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/grades/index.tpl',
-      1 => 1479138962,
+      1 => 1479140816,
       2 => 'file',
     ),
     'e1292f8b74a06a8cae3496ce7393f8577b691a09' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/layout/template.tpl',
-      1 => 1479139344,
+      1 => 1479141079,
       2 => 'file',
     ),
     '9f708dd578be11d2c3185a5b7ad014344c14b18f' => 
@@ -53,7 +53,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5829e12fcaeb65_39865481 ($_smarty_tpl) {
+function content_5829e900ae9423_80044744 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -64,7 +64,7 @@ function content_5829e12fcaeb65_39865481 ($_smarty_tpl) {
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="description" content="Nova Aplicação CREA-GO">
             <meta name="author" content="Magnun Dias Carvalho">
-            <title>CIE Cadastro de Instituição de Ensino</title>
+            <title>CIE - Cadastro de Instituição de Ensino</title>
 
             <meta name="mobile-web-app-capable" content="yes" />
             <link rel="icon" sizes="48x48" href="http://localhost/cie/public/icons/icon-48.png" />
@@ -138,7 +138,7 @@ function content_5829e12fcaeb65_39865481 ($_smarty_tpl) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand" href="http://localhost/cie/">CIE Cadastro de Instituição de Ensino</a>
+            <a class="navbar-brand" href="http://localhost/cie/">CIE - Cadastro de Instituição de Ensino</a>
         </div>
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
@@ -230,7 +230,7 @@ function content_5829e12fcaeb65_39865481 ($_smarty_tpl) {
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title">grades</h1>
+                <h1 class="panel-title">Grades</h1>
             </div>
             <div class="panel-body table-container">
                 

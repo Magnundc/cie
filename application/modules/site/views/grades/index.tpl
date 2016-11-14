@@ -5,7 +5,7 @@
         {include file="grades/modal-delete.tpl"}
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title">grades</h1>
+                <h1 class="panel-title">Grades</h1>
             </div>
             <div class="panel-body table-container">
                 {include file="grades/lista.tpl"}

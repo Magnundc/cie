@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:07:14
+/* Smarty version 3.1.28, created on 2016-11-14 14:53:19
   from "/var/www/cie/application/modules/site/views/layout/template.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829e1320e8335_48346334',
+  'unifunc' => 'content_5829ebffe7e249_84155266',
   'file_dependency' => 
   array (
     'e1292f8b74a06a8cae3496ce7393f8577b691a09' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/layout/template.tpl',
-      1 => 1479139344,
+      1 => 1479141079,
       2 => 'file',
     ),
   ),
@@ -19,9 +19,9 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5829e1320e8335_48346334 ($_smarty_tpl) {
+function content_5829ebffe7e249_84155266 ($_smarty_tpl) {
 $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->compiled->nocache_hash = '2052212905829e1320b81d0_64102274';
+$_smarty_tpl->compiled->nocache_hash = '11670983295829ebffe4e656_66659404';
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -34,7 +34,7 @@ $_smarty_tpl->compiled->nocache_hash = '2052212905829e1320b81d0_64102274';
             <meta name="author" content="Magnun Dias Carvalho">
             <title><?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "title", array (
-  0 => 'block_14824276745829e1320bb376_69115977',
+  0 => 'block_3175040415829ebffe518e1_62029670',
   1 => false,
   3 => 0,
   2 => 0,
@@ -168,7 +168,7 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "title", array (
                     <span class="icon-bar"></span>
                 </button>
             <a class="navbar-brand" href="<?php echo base_url;?>
-/">CIE Cadastro de Instituição de Ensino</a>
+/">CIE - Cadastro de Instituição de Ensino</a>
         </div>
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
@@ -189,7 +189,7 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "title", array (
             <div class="container-fluid">
                 <div class="v_space"><?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "conteudo", array (
-  0 => 'block_7501896785829e1320e01b7_24992208',
+  0 => 'block_2131073725829ebffe76320_19639158',
   1 => false,
   3 => 0,
   2 => 0,
@@ -202,13 +202,13 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "conteudo", array
 </html>
 <?php }
 /* {block 'title'}  file:layout/template.tpl */
-function block_14824276745829e1320bb376_69115977($_smarty_tpl, $_blockParentStack) {
+function block_3175040415829ebffe518e1_62029670($_smarty_tpl, $_blockParentStack) {
 ?>
-CIE Cadastro de Instituição de Ensino<?php
+CIE - Cadastro de Instituição de Ensino<?php
 }
 /* {/block 'title'} */
 /* {block 'conteudo'}  file:layout/template.tpl */
-function block_7501896785829e1320e01b7_24992208($_smarty_tpl, $_blockParentStack) {
+function block_2131073725829ebffe76320_19639158($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'conteudo'} */
 }

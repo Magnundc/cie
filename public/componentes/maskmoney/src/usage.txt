@@ -1,0 +1,6 @@
+$("#demo1").maskMoney();
+$("#demo2").maskMoney({thousands:'', decimal:'.'});
+$("#demo3").maskMoney({allowZero:false, allowNegative:true, defaultZero:false});
+$("#demo4").maskMoney({symbol:'R$ ', thousands:'.', decimal:',', symbolStay: true});
+$("#demo5").maskMoney('mask');
+$("#demo6").maskMoney('destroy');

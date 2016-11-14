@@ -1,0 +1,6 @@
+#!/bin/bash
+php ./model.php
+php ./controller.php
+php ./view.php
+dialog --msgbox 'Estrutura basica gerada com sucesso!' 5 40
+clear

@@ -1,0 +1,58 @@
+@import url("reset.css");
+@import url("application.css");
+
+.v_space{
+    margin-top: 5px;
+}
+
+.container{
+    width: 100%;
+}
+
+nav li{
+    display: inline-block;
+}
+
+.icone{
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.icone:hover{
+    opacity: 0.9;
+}
+
+#lista-marcadores div{
+    margin-top: 20px;
+}
+
+
+#lista-fotos .container-img img{
+    width: 100%;
+}
+
+#lista-fotos .container-img{
+    height: 80px;
+    overflow: hidden;
+}
+
+#lista-fotos .tools{
+    position: relative;
+    top: -23px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3px;
+    color: #FFF;
+}
+
+.table-container{
+    height: 550px;
+    overflow-y: auto;
+}
+
+.despesa{
+    color: red;
+}
+
+.receita{
+    color: green;
+}

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:53:19
+/* Smarty version 3.1.28, created on 2016-11-18 17:01:24
   from "/var/www/cie/application/modules/site/views/instituicoes/form.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829ebffe8dce9_92454335',
+  'unifunc' => 'content_582f5004109f72_86660457',
   'file_dependency' => 
   array (
     '4c9bdb786897ef105c0020ff459e1a6e88091d97' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/instituicoes/form.tpl',
-      1 => 1479138962,
+      1 => 1479492980,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5829ebffe8dce9_92454335 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '1034963525829ebffe893b1_89951013';
+function content_582f5004109f72_86660457 ($_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '2122205272582f5004105776_84624923';
 ?>
 
 <form name="frm-instituicoes" method="post">
@@ -33,7 +33,7 @@ $_smarty_tpl->compiled->nocache_hash = '1034963525829ebffe893b1_89951013';
         <input type="text" ng-model="instituicoe.nome" class="form-control" id="nome" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="nome_abreviado" class="upper">nome abreviado:</label>
+        <label for="nome_abreviado" class="upper">Nome Abreviado:</label>
         <input type="text" ng-model="instituicoe.nome_abreviado" class="form-control" id="nome_abreviado" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
@@ -41,15 +41,15 @@ $_smarty_tpl->compiled->nocache_hash = '1034963525829ebffe893b1_89951013';
         <input type="text" ng-model="instituicoe.data_registro" class="data medium_field form-control" id="data_registro" />
     </section>
     <section class="form-group">
-        <label for="nivel_ensino" class="upper">nivel ensino:</label>
+        <label for="nivel_ensino" class="upper">nível ensino:</label>
         <input type="text" ng-model="instituicoe.nivel_ensino" class="form-control" id="nivel_ensino" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="endereco" class="upper">endereco:</label>
+        <label for="endereco" class="upper">endereço:</label>
         <input type="text" ng-model="instituicoe.endereco" class="form-control" id="endereco" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="complemento_endereco" class="upper">complemento endereco:</label>
+        <label for="complemento_endereco" class="upper">complemento endereço:</label>
         <input type="text" ng-model="instituicoe.complemento_endereco" class="form-control" id="complemento_endereco" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
@@ -69,7 +69,7 @@ $_smarty_tpl->compiled->nocache_hash = '1034963525829ebffe893b1_89951013';
         <input type="text" ng-model="instituicoe.telefone" class="form-control" id="telefone" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="email" class="upper">email:</label>
+        <label for="email" class="upper">e-mail:</label>
         <input type="text" ng-model="instituicoe.email" class="form-control" id="email" autocomplete="off" maxlength="45" />
     </section>
 </form>

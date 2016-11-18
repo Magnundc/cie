@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:42:21
+/* Smarty version 3.1.28, created on 2016-11-18 16:46:59
   from "/var/www/cie/application/modules/site/views/cursos/form.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829e96d013fd1_91482914',
+  'unifunc' => 'content_582f4ca3b32ba8_18768677',
   'file_dependency' => 
   array (
     '13727264de2699462c3847128b2031bda2a68590' => 
@@ -19,8 +19,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5829e96d013fd1_91482914 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '17818945375829e96d00fe66_54555143';
+function content_582f4ca3b32ba8_18768677 ($_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '1989971383582f4ca3b2ed44_69603017';
 ?>
 
 <form name="frm-cursos" method="post">

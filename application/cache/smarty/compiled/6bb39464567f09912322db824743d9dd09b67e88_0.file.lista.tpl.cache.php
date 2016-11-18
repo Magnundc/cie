@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:42:21
+/* Smarty version 3.1.28, created on 2016-11-18 16:46:59
   from "/var/www/cie/application/modules/site/views/cursos/lista.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829e96d01ec51_98397551',
+  'unifunc' => 'content_582f4ca3b3d833_61077826',
   'file_dependency' => 
   array (
     '6bb39464567f09912322db824743d9dd09b67e88' => 
@@ -19,8 +19,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5829e96d01ec51_98397551 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '5287654845829e96d01a981_36537063';
+function content_582f4ca3b3d833_61077826 ($_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '905071471582f4ca3b394b5_37967148';
 ?>
 
 <table class="table table-condensed table-bordered">

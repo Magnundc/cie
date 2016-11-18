@@ -1,5 +1,8 @@
 {literal}
-<table class="table table-condensed table-bordered">
+
+    
+    
+    <table class="table table-condensed table-bordered">
     <thead>
         <tr>
             <th class="min">
@@ -13,18 +16,9 @@
                     </ul>
                 </span>
             </th>
-            <th width="5%">id</th>
-            <th>nome</th>
+            <th width="5%"><th>nome</th>
             <th>nome abreviado</th>
-            <th>data registro</th>
-            <th>nivel ensino</th>
-            <th>endereco</th>
-            <th>complemento endereco</th>
-            <th>bairro</th>
             <th>cidade</th>
-            <th>CEP</th>
-            <th>telefone</th>
-            <th>email</th>
         </tr>
     </thead>
     <tfoot class="msg">
@@ -47,19 +41,10 @@
                 </div>
             </span>
         </td>
-            <td  class="right">{{instituicoe.id}}</td>
-            <td >{{instituicoe.nome}}</td>
+            <td  class="right"><td >{{instituicoe.nome}}</td>
             <td >{{instituicoe.nome_abreviado}}</td>
-            <td >{{instituicoe.data_registro}}</td>
-            <td >{{instituicoe.nivel_ensino}}</td>
-            <td >{{instituicoe.endereco}}</td>
-            <td >{{instituicoe.complemento_endereco}}</td>
-            <td >{{instituicoe.bairro}}</td>
             <td >{{instituicoe.cidade}}</td>
-            <td >{{instituicoe.CEP}}</td>
-            <td >{{instituicoe.telefone}}</td>
-            <td >{{instituicoe.email}}</td>
-        </tr>
+            </tr>
     </tbody>
 </table>
 {/literal}

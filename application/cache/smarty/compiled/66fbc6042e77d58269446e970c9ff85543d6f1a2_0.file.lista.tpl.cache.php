@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:53:19
+/* Smarty version 3.1.28, created on 2016-11-18 17:01:24
   from "/var/www/cie/application/modules/site/views/instituicoes/lista.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829ebffe99329_15973869',
+  'unifunc' => 'content_582f50041181b3_41108543',
   'file_dependency' => 
   array (
     '66fbc6042e77d58269446e970c9ff85543d6f1a2' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/instituicoes/lista.tpl',
-      1 => 1479138962,
+      1 => 1479495530,
       2 => 'file',
     ),
   ),
@@ -19,11 +19,14 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5829ebffe99329_15973869 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '11004496425829ebffe94dd9_02314379';
+function content_582f50041181b3_41108543 ($_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '821838979582f5004114900_41149950';
 ?>
 
-<table class="table table-condensed table-bordered">
+
+    
+    
+    <table class="table table-condensed table-bordered">
     <thead>
         <tr>
             <th class="min">
@@ -37,18 +40,9 @@ $_smarty_tpl->compiled->nocache_hash = '11004496425829ebffe94dd9_02314379';
                     </ul>
                 </span>
             </th>
-            <th width="5%">id</th>
-            <th>nome</th>
+            <th width="5%"><th>nome</th>
             <th>nome abreviado</th>
-            <th>data registro</th>
-            <th>nivel ensino</th>
-            <th>endereco</th>
-            <th>complemento endereco</th>
-            <th>bairro</th>
             <th>cidade</th>
-            <th>CEP</th>
-            <th>telefone</th>
-            <th>email</th>
         </tr>
     </thead>
     <tfoot class="msg">
@@ -71,19 +65,10 @@ $_smarty_tpl->compiled->nocache_hash = '11004496425829ebffe94dd9_02314379';
                 </div>
             </span>
         </td>
-            <td  class="right">{{instituicoe.id}}</td>
-            <td >{{instituicoe.nome}}</td>
+            <td  class="right"><td >{{instituicoe.nome}}</td>
             <td >{{instituicoe.nome_abreviado}}</td>
-            <td >{{instituicoe.data_registro}}</td>
-            <td >{{instituicoe.nivel_ensino}}</td>
-            <td >{{instituicoe.endereco}}</td>
-            <td >{{instituicoe.complemento_endereco}}</td>
-            <td >{{instituicoe.bairro}}</td>
             <td >{{instituicoe.cidade}}</td>
-            <td >{{instituicoe.CEP}}</td>
-            <td >{{instituicoe.telefone}}</td>
-            <td >{{instituicoe.email}}</td>
-        </tr>
+            </tr>
     </tbody>
 </table>
 

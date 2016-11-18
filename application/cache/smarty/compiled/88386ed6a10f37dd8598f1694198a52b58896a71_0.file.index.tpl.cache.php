@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:42:20
+/* Smarty version 3.1.28, created on 2016-11-18 16:46:59
   from "/var/www/cie/application/modules/site/views/cursos/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829e96cf10c40_52176622',
+  'unifunc' => 'content_582f4ca3aee8a3_20678372',
   'file_dependency' => 
   array (
     '88386ed6a10f37dd8598f1694198a52b58896a71' => 
@@ -24,14 +24,14 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:layout/pagination.tpl' => 1,
   ),
 ),false)) {
-function content_5829e96cf10c40_52176622 ($_smarty_tpl) {
+function content_582f4ca3aee8a3_20678372 ($_smarty_tpl) {
 $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '10654285915829e96ced2901_08293480';
+$_smarty_tpl->compiled->nocache_hash = '50247441582f4ca3aaf007_81474501';
 ?>
 
 <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "conteudo", array (
-  0 => 'block_3103581135829e96cefea45_62671662',
+  0 => 'block_1724564714582f4ca3add099_23683793',
   1 => false,
   3 => 0,
   2 => 0,
@@ -42,7 +42,7 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "conteudo", array
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layout/template.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'conteudo'}  file:application/modules/site/views/cursos/index.tpl */
-function block_3103581135829e96cefea45_62671662($_smarty_tpl, $_blockParentStack) {
+function block_1724564714582f4ca3add099_23683793($_smarty_tpl, $_blockParentStack) {
 ?>
 
     <div class="row" ng-controller="CursosController">

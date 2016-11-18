@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-14 14:53:19
+/* Smarty version 3.1.28, created on 2016-11-18 17:01:24
   from "/var/www/cie/application/modules/site/views/instituicoes/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5829ebffeaa123_18667847',
+  'unifunc' => 'content_582f5004127d83_74765221',
   'file_dependency' => 
   array (
     'e8fb21d099827d7eb406ef2bd9f4c34134540e8b' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/instituicoes/index.tpl',
-      1 => 1479140737,
+      1 => 1479495616,
       2 => 'file',
     ),
     'e1292f8b74a06a8cae3496ce7393f8577b691a09' => 
@@ -29,7 +29,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     '4c9bdb786897ef105c0020ff459e1a6e88091d97' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/instituicoes/form.tpl',
-      1 => 1479138962,
+      1 => 1479492980,
       2 => 'file',
     ),
     '16d6b026fad5889dcce3c19378c2b36de7455b69' => 
@@ -38,10 +38,16 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
       1 => 1479138962,
       2 => 'file',
     ),
+    '72e6544b63fe773e9b6a4ccfd17d5cf7cc7c7052' => 
+    array (
+      0 => '/var/www/cie/application/modules/site/views/instituicoes/consulta.tpl',
+      1 => 1479495669,
+      2 => 'file',
+    ),
     '66fbc6042e77d58269446e970c9ff85543d6f1a2' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/instituicoes/lista.tpl',
-      1 => 1479138962,
+      1 => 1479495530,
       2 => 'file',
     ),
     'c76867d6fad5ec76add43697709a9f5c2c9415bf' => 
@@ -53,7 +59,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_5829ebffeaa123_18667847 ($_smarty_tpl) {
+function content_582f5004127d83_74765221 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -178,7 +184,7 @@ function content_5829ebffeaa123_18667847 ($_smarty_tpl) {
         <input type="text" ng-model="instituicoe.nome" class="form-control" id="nome" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="nome_abreviado" class="upper">nome abreviado:</label>
+        <label for="nome_abreviado" class="upper">Nome Abreviado:</label>
         <input type="text" ng-model="instituicoe.nome_abreviado" class="form-control" id="nome_abreviado" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
@@ -186,15 +192,15 @@ function content_5829ebffeaa123_18667847 ($_smarty_tpl) {
         <input type="text" ng-model="instituicoe.data_registro" class="data medium_field form-control" id="data_registro" />
     </section>
     <section class="form-group">
-        <label for="nivel_ensino" class="upper">nivel ensino:</label>
+        <label for="nivel_ensino" class="upper">nível ensino:</label>
         <input type="text" ng-model="instituicoe.nivel_ensino" class="form-control" id="nivel_ensino" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="endereco" class="upper">endereco:</label>
+        <label for="endereco" class="upper">endereço:</label>
         <input type="text" ng-model="instituicoe.endereco" class="form-control" id="endereco" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="complemento_endereco" class="upper">complemento endereco:</label>
+        <label for="complemento_endereco" class="upper">complemento endereço:</label>
         <input type="text" ng-model="instituicoe.complemento_endereco" class="form-control" id="complemento_endereco" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
@@ -214,7 +220,7 @@ function content_5829ebffeaa123_18667847 ($_smarty_tpl) {
         <input type="text" ng-model="instituicoe.telefone" class="form-control" id="telefone" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="email" class="upper">email:</label>
+        <label for="email" class="upper">e-mail:</label>
         <input type="text" ng-model="instituicoe.email" class="form-control" id="email" autocomplete="off" maxlength="45" />
     </section>
 </form>
@@ -246,29 +252,31 @@ function content_5829ebffeaa123_18667847 ($_smarty_tpl) {
     </div>
 </div>
 
+        
+            <div class="container">
+                <form action=  method="GET" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="q" placeholder="Pesquise por instituições">
+                        <span class="input-group-btn">
+                            <button class="btn btn" type="reset"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </form>
+    
+  
+
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h1 class="panel-title">Instituições</h1>
             </div>
             
-            <div class="container">
-                <div class="row">
-		<div id="custom-search-input">
-                            <div class="input-group col-md-12">
-                                <input type="text" class="  search-query form-control" placeholder="Para pesquisar digite um dado da insituição" />
-                                <span class="input-group-btn">
-                                    <button class="btn" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                </div>
-            </div>
-
             <div class="panel-body table-container">
                 
-<table class="table table-condensed table-bordered">
+
+    
+    
+    <table class="table table-condensed table-bordered">
     <thead>
         <tr>
             <th class="min">
@@ -282,18 +290,9 @@ function content_5829ebffeaa123_18667847 ($_smarty_tpl) {
                     </ul>
                 </span>
             </th>
-            <th width="5%">id</th>
-            <th>nome</th>
+            <th width="5%"><th>nome</th>
             <th>nome abreviado</th>
-            <th>data registro</th>
-            <th>nivel ensino</th>
-            <th>endereco</th>
-            <th>complemento endereco</th>
-            <th>bairro</th>
             <th>cidade</th>
-            <th>CEP</th>
-            <th>telefone</th>
-            <th>email</th>
         </tr>
     </thead>
     <tfoot class="msg">
@@ -316,19 +315,10 @@ function content_5829ebffeaa123_18667847 ($_smarty_tpl) {
                 </div>
             </span>
         </td>
-            <td  class="right">{{instituicoe.id}}</td>
-            <td >{{instituicoe.nome}}</td>
+            <td  class="right"><td >{{instituicoe.nome}}</td>
             <td >{{instituicoe.nome_abreviado}}</td>
-            <td >{{instituicoe.data_registro}}</td>
-            <td >{{instituicoe.nivel_ensino}}</td>
-            <td >{{instituicoe.endereco}}</td>
-            <td >{{instituicoe.complemento_endereco}}</td>
-            <td >{{instituicoe.bairro}}</td>
             <td >{{instituicoe.cidade}}</td>
-            <td >{{instituicoe.CEP}}</td>
-            <td >{{instituicoe.telefone}}</td>
-            <td >{{instituicoe.email}}</td>
-        </tr>
+            </tr>
     </tbody>
 </table>
 

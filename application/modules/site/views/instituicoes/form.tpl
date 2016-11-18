@@ -9,7 +9,7 @@
         <input type="text" ng-model="instituicoe.nome" class="form-control" id="nome" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="nome_abreviado" class="upper">nome abreviado:</label>
+        <label for="nome_abreviado" class="upper">Nome Abreviado:</label>
         <input type="text" ng-model="instituicoe.nome_abreviado" class="form-control" id="nome_abreviado" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
@@ -17,15 +17,15 @@
         <input type="text" ng-model="instituicoe.data_registro" class="data medium_field form-control" id="data_registro" />
     </section>
     <section class="form-group">
-        <label for="nivel_ensino" class="upper">nivel ensino:</label>
+        <label for="nivel_ensino" class="upper">nível ensino:</label>
         <input type="text" ng-model="instituicoe.nivel_ensino" class="form-control" id="nivel_ensino" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="endereco" class="upper">endereco:</label>
+        <label for="endereco" class="upper">endereço:</label>
         <input type="text" ng-model="instituicoe.endereco" class="form-control" id="endereco" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="complemento_endereco" class="upper">complemento endereco:</label>
+        <label for="complemento_endereco" class="upper">complemento endereço:</label>
         <input type="text" ng-model="instituicoe.complemento_endereco" class="form-control" id="complemento_endereco" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
@@ -45,7 +45,7 @@
         <input type="text" ng-model="instituicoe.telefone" class="form-control" id="telefone" autocomplete="off" maxlength="45" />
     </section>
     <section class="form-group">
-        <label for="email" class="upper">email:</label>
+        <label for="email" class="upper">e-mail:</label>
         <input type="text" ng-model="instituicoe.email" class="form-control" id="email" autocomplete="off" maxlength="45" />
     </section>
 </form>

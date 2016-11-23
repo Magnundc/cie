@@ -128,7 +128,13 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
         ng.instituicoe = i;
         $("#modal-delete").modal("show");
     };
-
+    
+    ng.pesquisar = function(n){
+        getMask();
+        ng.reload();
+        ng.base_url=base_url;
+    };
+    
     var init = function(){
         getMask();
         ng.reload();

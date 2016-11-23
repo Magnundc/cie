@@ -129,10 +129,8 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
         $("#modal-delete").modal("show");
     };
     
-    ng.pesquisar = function(n){
-        getMask();
-        ng.reload();
-        ng.base_url=base_url;
+    ng.pesquisa = function(n){
+        ng.pesquisar = n;
     };
     
     var init = function(){

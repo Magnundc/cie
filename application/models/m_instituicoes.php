@@ -45,12 +45,14 @@ class M_instituicoes extends CI_Model {
         return $query->result();
     }
     
-     public function pesquisar($nome) { 
-        $this->db->select("in.*");
-        $this->db->from("instituicoes in");
-        $this->db->where("in.nome = ",$nome);
+    public function pesquisa($nome) { 
+        $this->db->select("ins.*");
+        $this->db->from("instituicoes ins");
+        $this->db->where("ins.nome like '".$nome."%' "
+                . "or ins.nome_abreviado like '".$nome."%' "
+                . "or ins.cidade like '".$nome."%'");
         $query = $this->db->get();
-        return $query->result();
+        return is_object($query)?$query->result():array();
     }
 
 }

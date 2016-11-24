@@ -46,5 +46,13 @@ class M_contatos extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+    
+    public function pesquisa($nome) { 
+        $this->db->select("co.*");
+        $this->db->from("contatos co");
+        $this->db->where("co.nome like '".$nome."%' ");
+        $query = $this->db->get();
+        return is_object($query)?$query->result():array();
+    }
 
 }

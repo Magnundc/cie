@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-18 16:46:59
+/* Smarty version 3.1.28, created on 2016-11-24 15:09:35
   from "/var/www/cie/application/modules/site/views/cursos/modal-form.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_582f4ca3b2d186_03592815',
+  'unifunc' => 'content_58371ecfe3e8c6_78905021',
   'file_dependency' => 
   array (
     'f5d96906be0c49544c7ad1d3db96574f2d806ebc' => 
@@ -20,8 +20,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:cursos/form.tpl' => 1,
   ),
 ),false)) {
-function content_582f4ca3b2d186_03592815 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '944084508582f4ca3b28259_79157808';
+function content_58371ecfe3e8c6_78905021 ($_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '170655056758371ecfe39ca0_28674174';
 ?>
 <div class="modal fade" id="modal-form" tabindex="-1" role="dialog"  aria-hidden="false">
     <div class="modal-dialog">

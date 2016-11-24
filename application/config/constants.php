@@ -39,7 +39,9 @@ define('FOPEN_READ_WRITE_CREATE', 'a+b');
 define('FOPEN_WRITE_CREATE_STRICT', 'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT', 'x+b');
 
-define('base_url', "http://localhost/cie");
+define('base_url', "http://".$_SERVER['SERVER_NAME']."/cie");
+
+//define('base_url', "http://localhost/cie");
 
 
 /* End of file constants.php */

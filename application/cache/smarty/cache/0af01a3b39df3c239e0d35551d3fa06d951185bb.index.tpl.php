@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-18 17:01:23
+/* Smarty version 3.1.28, created on 2016-11-24 15:09:35
   from "/var/www/cie/application/modules/site/views/contatos/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_582f50032564c9_85072081',
+  'unifunc' => 'content_58371ecf46d727_03677565',
   'file_dependency' => 
   array (
     '0af01a3b39df3c239e0d35551d3fa06d951185bb' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/contatos/index.tpl',
-      1 => 1479140609,
+      1 => 1479991800,
       2 => 'file',
     ),
     'e1292f8b74a06a8cae3496ce7393f8577b691a09' => 
@@ -41,7 +41,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     '88ebcde56c9d11f1e341df0be021258bf1d74dbb' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/contatos/lista.tpl',
-      1 => 1479138962,
+      1 => 1479840265,
       2 => 'file',
     ),
     'c76867d6fad5ec76add43697709a9f5c2c9415bf' => 
@@ -53,7 +53,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_582f50032564c9_85072081 ($_smarty_tpl) {
+function content_58371ecf46d727_03677565 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -224,20 +224,22 @@ function content_582f50032564c9_85072081 ($_smarty_tpl) {
             <div class="panel-heading">
                 <h1 class="panel-title">Contatos</h1>
             </div>
-            <div class="container">
-	<div class="row">
-		
-           <div id="custom-search-input">
-                            <div class="input-group col-md-12">
-                                <input type="text" class="  search-query form-control" placeholder="Para pesquisar digite um dado do contato" />
-                                <span class="input-group-btn">
-                                    <button class="btn" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-	</div>
+            
+                
+                <div class="panel-body">
+                <div class="container">
+                <form method ="GET" >
+                    <div class="input-group">
+                    <input ng-model="form.pesquisa" autocomplete="on" type="submit" class="form-control" name="q" placeholder="Pesquise por um contato">
+                        <span class="input-group-btn">
+                            <button ng-click="pesquisar()" class="btn btn" type="button"><span class="glyphicon glyphicon-search"> </span>
+                        </button>
+                      </span>
+                    </div>
+                </form>
+                </div>
+                </div>
+            
             <div class="panel-body table-container">
                 
 <table class="table table-condensed table-bordered">
@@ -292,6 +294,7 @@ function content_582f50032564c9_85072081 ($_smarty_tpl) {
 
 
             </div>
+            
             <div class="panel-footer table-container">
                     <div>
         <ul class="pagination" ng-show="paginas.numeros.length > 1">
@@ -307,9 +310,11 @@ function content_582f50032564c9_85072081 ($_smarty_tpl) {
     </div>
 
             </div>
-        </div>
-    </div>
-    <script src="http://localhost/cie/public/js/modules/site/contatos/index.js"></script>
+            
+            </div>
+            </div>
+    
+        <script src="http://localhost/cie/public/js/modules/site/contatos/index.js"></script>
 </div>
             </div>
         </div>

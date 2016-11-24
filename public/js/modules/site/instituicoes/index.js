@@ -121,6 +121,8 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
 
     ng.editar = function(i){
         ng.instituicoe = i;
+        var data = i.data_registro.split("-");
+        ng.instituicoe.data_registro = data[2] + "-" + data[1] + "-" + data[0];
         $("#modal-form").modal("show");
     };
 
@@ -129,12 +131,24 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
         $("#modal-delete").modal("show");
     };
     
-    ng.pesquisa = function(n){
-        ng.pesquisar = n;
+    ng.pesquisar = function(){
+        $http.get(base_url+'/instituicoes/pesquisar/'+ng.form.pesquisa).success(function(json){
+            console.log(json);
+            ng.dados = json;
+        })
+    };
+    
+    ng.verinstituicao = function(i){
+        ng.instituicoe = i;
+        var data = i.data_registro.split("-");
+        ng.instituicoe.data_registro = data[2] + "-" + data[1] + "-" + data[0];
+        $("#modal-form").modal("show");
     };
     
     var init = function(){
         getMask();
+        ng.dados = {};
+        ng.form = {};
         ng.reload();
         ng.base_url=base_url;
     };

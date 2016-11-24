@@ -6,7 +6,7 @@
     </section>
     <section class="form-group">
         <label for="nome" class="upper">nome:</label>
-        <input type="text" ng-model="instituicoe.nome" class="form-control" id="nome" autocomplete="off" maxlength="45" />
+        <input type="text" ng-model="instituicoe.nome" class="form-control" id="nome" autocomplete="on" maxlength="100" />
     </section>
     <section class="form-group">
         <label for="nome_abreviado" class="upper">Nome Abreviado:</label>

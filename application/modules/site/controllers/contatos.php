@@ -37,5 +37,11 @@ class Contatos extends MX_Controller{
         $dados = $this->model->lista($this->params[3], $this->params[4], $this->params[5], $this->params[6]);
         echo json_encode($dados);
     }
+    
+    public function pesquisar(){
+        header('Content-type: application/json');
+        $dados = $this->model->pesquisa($this->params[3]);
+        echo json_encode($dados);
+    }
 
 }

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-18 16:46:59
+/* Smarty version 3.1.28, created on 2016-11-24 15:09:35
   from "/var/www/cie/application/modules/site/views/cursos/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_582f4ca3b4de05_98149230',
+  'unifunc' => 'content_58371ecfe5ebc3_01327533',
   'file_dependency' => 
   array (
     '88386ed6a10f37dd8598f1694198a52b58896a71' => 
@@ -53,7 +53,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_582f4ca3b4de05_98149230 ($_smarty_tpl) {
+function content_58371ecfe5ebc3_01327533 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">

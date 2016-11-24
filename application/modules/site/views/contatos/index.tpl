@@ -7,27 +7,32 @@
             <div class="panel-heading">
                 <h1 class="panel-title">Contatos</h1>
             </div>
-            <div class="container">
-	<div class="row">
-		
-           <div id="custom-search-input">
-                            <div class="input-group col-md-12">
-                                <input type="text" class="  search-query form-control" placeholder="Para pesquisar digite um dado do contato" />
-                                <span class="input-group-btn">
-                                    <button class="btn" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-	</div>
+            
+                {*Painel de pesquisa*}
+                <div class="panel-body">
+                <div class="container">
+                <form method ="GET" >
+                    <div class="input-group">
+                    <input ng-model="form.pesquisa" autocomplete="on" type="submit" class="form-control" name="q" placeholder="Pesquise por um contato">
+                        <span class="input-group-btn">
+                            <button ng-click="pesquisar()" class="btn btn" type="button"><span class="glyphicon glyphicon-search"> </span>
+                        </button>
+                      </span>
+                    </div>
+                </form>
+                </div>
+                </div>
+            
             <div class="panel-body table-container">
                 {include file="contatos/lista.tpl"}
             </div>
+            
             <div class="panel-footer table-container">
                 {include file="layout/pagination.tpl"}
             </div>
-        </div>
-    </div>
-    <script src="{base_url}/public/js/modules/site/contatos/index.js"></script>
+            
+            </div>
+            </div>
+    
+        <script src="{base_url}/public/js/modules/site/contatos/index.js"></script>
 {/block}

@@ -134,9 +134,18 @@ app.controller("ContatosController", function($scope, $http, $timeout){
         ng.contato = c;
         $("#modal-delete").modal("show");
     };
+    
+    ng.pesquisar = function(){
+        $http.get(base_url+'/contatos/pesquisar/'+ng.form.pesquisa).success(function(json){
+            console.log(json);
+            ng.dados = json;
+        })
+    };
 
     var init = function(){
         getMask();
+        ng.dados = {};
+        ng.form = {};
         ng.reload();
         ng.base_url=base_url;
         loadInstituicoes();

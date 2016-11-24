@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28, created on 2016-11-18 17:01:24
+/* Smarty version 3.1.28, created on 2016-11-24 16:31:55
   from "/var/www/cie/application/modules/site/views/instituicoes/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_582f5004127d83_74765221',
+  'unifunc' => 'content_5837321ba7cce0_87134844',
   'file_dependency' => 
   array (
     'e8fb21d099827d7eb406ef2bd9f4c34134540e8b' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/instituicoes/index.tpl',
-      1 => 1479495616,
+      1 => 1480011136,
       2 => 'file',
     ),
     'e1292f8b74a06a8cae3496ce7393f8577b691a09' => 
@@ -29,7 +29,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     '4c9bdb786897ef105c0020ff459e1a6e88091d97' => 
     array (
       0 => '/var/www/cie/application/modules/site/views/instituicoes/form.tpl',
-      1 => 1479492980,
+      1 => 1479990077,
       2 => 'file',
     ),
     '16d6b026fad5889dcce3c19378c2b36de7455b69' => 
@@ -38,16 +38,10 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
       1 => 1479138962,
       2 => 'file',
     ),
-    '72e6544b63fe773e9b6a4ccfd17d5cf7cc7c7052' => 
+    '52fbc3f8761fe4b1381f5754d4067046615f71bc' => 
     array (
-      0 => '/var/www/cie/application/modules/site/views/instituicoes/consulta.tpl',
-      1 => 1479495669,
-      2 => 'file',
-    ),
-    '66fbc6042e77d58269446e970c9ff85543d6f1a2' => 
-    array (
-      0 => '/var/www/cie/application/modules/site/views/instituicoes/lista.tpl',
-      1 => 1479495530,
+      0 => '/var/www/cie/application/modules/site/views/instituicoes/pesquisa.tpl',
+      1 => 1479992826,
       2 => 'file',
     ),
     'c76867d6fad5ec76add43697709a9f5c2c9415bf' => 
@@ -59,7 +53,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_582f5004127d83_74765221 ($_smarty_tpl) {
+function content_5837321ba7cce0_87134844 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -181,7 +175,7 @@ function content_582f5004127d83_74765221 ($_smarty_tpl) {
     </section>
     <section class="form-group">
         <label for="nome" class="upper">nome:</label>
-        <input type="text" ng-model="instituicoe.nome" class="form-control" id="nome" autocomplete="off" maxlength="45" />
+        <input type="text" ng-model="instituicoe.nome" class="form-control" id="nome" autocomplete="on" maxlength="100" />
     </section>
     <section class="form-group">
         <label for="nome_abreviado" class="upper">Nome Abreviado:</label>
@@ -253,26 +247,33 @@ function content_582f5004127d83_74765221 ($_smarty_tpl) {
 </div>
 
         
-            <div class="container">
-                <form action=  method="GET" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="q" placeholder="Pesquise por instituições">
-                        <span class="input-group-btn">
-                            <button class="btn btn" type="reset"><span class="glyphicon glyphicon-search"></span></button>
-                        </span>
-                    </div>
-                </form>
-    
-  
-
-
+                
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h1 class="panel-title">Instituições</h1>
-            </div>
-            
-            <div class="panel-body table-container">
                 
+                
+                <div class="panel-body">
+                <div class="container">
+                <form method ="GET" >
+                    <div class="input-group">
+                    <input id="pesquisa" ng-model="form.pesquisa" type="text" class="form-control" 
+                           placeholder="Pesquise por uma insituição" ng-focus="focus=true"
+                           ng-blur="focus=true" ng-change= "pesquisar(form.pesquisa)" maxlength="100">
+                            <span class="input-group-btn">
+                            <button ng-click="pesquisar()" class="btn btn" type="button">
+                            <span class="glyphicon glyphicon-search"> </span>
+                        </button>
+                      </span>
+                    </div>
+                </form>
+                </div>
+                </div>
+                <script>  </script>
+           
+            
+            <div class="panel-body">
+                <p id="lista">
 
     
     
@@ -301,7 +302,7 @@ function content_582f5004127d83_74765221 ($_smarty_tpl) {
         </tr>
     </tfoot>
     <tbody>
-        <tr ng-repeat="instituicoe in lista">
+        <tr ng-repeat="d in dados">
             <td class="center">
                 <span class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -309,21 +310,31 @@ function content_582f5004127d83_74765221 ($_smarty_tpl) {
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                        <li ng-click="editar(instituicoe)"><a href="javascript:void(0)"><i class="icon-pencil-4"></i> Editar</a></li>
-                        <li ng-click="excluir(instituicoe)"><a href="javascript:void(0)"><i class="icon-trashcan"></i> Excluir</a></li>
+                        <li ng-click="editar(d)"><a href="javascript:void(0)"><i class="icon-pencil-4"></i> Editar</a></li>
+                        <li ng-click="excluir(d)"><a href="javascript:void(0)"><i class="icon-trashcan"></i> Excluir</a></li>
                     </ul>
                 </div>
             </span>
         </td>
-            <td  class="right"><td >{{instituicoe.nome}}</td>
-            <td >{{instituicoe.nome_abreviado}}</td>
-            <td >{{instituicoe.cidade}}</td>
+            <td  class="right"><td >{{d.nome}}</td>
+            <td >{{d.nome_abreviado}}</td>
+            <td >{{d.cidade}}</td>
             </tr>
     </tbody>
 </table>
 
-
+</p>
+                
+                
+                
+                
+                
+                <script>
+                
+                </script>
+            
             </div>
+            
             <div class="panel-footer table-container">
                     <div>
         <ul class="pagination" ng-show="paginas.numeros.length > 1">

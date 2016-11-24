@@ -17,7 +17,9 @@ class Instituicoes extends MX_Controller{
 
     public function salvar(){
         header('Content-type: application/json');
+        $this->load->helper("data");
         $dados = $this->params();
+        $dados["data_registro"] = Data_helper::inverter($dados["data_registro"]);
         $result = $this->model->salvar($dados);
         echo json_encode($result);
     }
@@ -35,6 +37,18 @@ class Instituicoes extends MX_Controller{
     public function listar(){
         header('Content-type: application/json');
         $dados = $this->model->lista($this->params[3], $this->params[4], $this->params[5], $this->params[6]);
+        echo json_encode($dados);
+    }
+    
+     public function verinstituicao(){
+        header('Content-type: application/json');
+        $dados = $this->model->carregar($this->params[3], $this->params[4], $this->params[5], $this->params[6]);
+        echo json_encode($dados);
+    }
+    
+    public function pesquisar(){
+        header('Content-type: application/json');
+        $dados = $this->model->pesquisa($this->params[3]);
         echo json_encode($dados);
     }
 

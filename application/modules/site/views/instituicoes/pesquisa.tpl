@@ -35,8 +35,8 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                        <li ng-click="editar(instituicoe)"><a href="javascript:void(0)"><i class="icon-pencil-4"></i> Editar</a></li>
-                        <li ng-click="excluir(instituicoe)"><a href="javascript:void(0)"><i class="icon-trashcan"></i> Excluir</a></li>
+                        <li ng-click="editar(d)"><a href="javascript:void(0)"><i class="icon-pencil-4"></i> Editar</a></li>
+                        <li ng-click="excluir(d)"><a href="javascript:void(0)"><i class="icon-trashcan"></i> Excluir</a></li>
                     </ul>
                 </div>
             </span>

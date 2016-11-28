@@ -132,6 +132,8 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
     };
     
     ng.pesquisar = function(){
+        $("#lista").hide();
+        $("#pesquisa2").show();
         $http.get(base_url+'/instituicoes/pesquisar/'+ng.form.pesquisa).success(function(json){
             console.log(json);
             ng.dados = json;
@@ -143,13 +145,27 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
         var data = i.data_registro.split("-");
         ng.instituicoe.data_registro = data[2] + "-" + data[1] + "-" + data[0];
         $("#modal-form").modal("show");
+        
+    };
+    
+    ng.ocultapesquisa = function(){
+        $("#pesquisa2").hide();
+        
+    };
+    
+    ng.verlista = function(){
+        $("#lista").show();
+        $("#pesquisa2").hide();
+        
     };
     
     var init = function(){
         getMask();
         ng.dados = {};
         ng.form = {};
+        ng.ocultapesquisa();
         ng.reload();
+        
         ng.base_url=base_url;
     };
 

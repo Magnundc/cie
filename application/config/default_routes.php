@@ -33,6 +33,7 @@ $route['instituicoes/listar/(:num)/(:num)/(:any)'] = 'site/instituicoes/listar';
 $route['instituicoes/salvar'] = 'site/instituicoes/salvar'; 
 $route['instituicoes/excluir/(:num)'] = 'site/instituicoes/excluir'; 
 $route['instituicoes/obter/(:num)'] = 'site/instituicoes/obter'; 
+$route['instituicoes/total'] = 'site/instituicoes/verinstituicao';
 
 //Rota para listasegresso 
 $route['listasegresso'] = 'site/listasegresso/index'; 
@@ -41,4 +42,5 @@ $route['listasegresso/listar/(:num)/(:num)/(:any)'] = 'site/listasegresso/listar
 $route['listasegresso/salvar'] = 'site/listasegresso/salvar'; 
 $route['listasegresso/excluir/(:num)'] = 'site/listasegresso/excluir'; 
 $route['listasegresso/obter/(:num)'] = 'site/listasegresso/obter'; 
+
 

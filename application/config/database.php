@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'creago';
-$db['default']['database'] = 'cie';
+$db['default']['hostname'] = 'us-cdbr-iron-east-05.cleardb.net';
+$db['default']['username'] = 'b1e5ec26cfd7b9';
+$db['default']['password'] = 'b36216d8';
+$db['default']['database'] = 'heroku_f58ab8624793485';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

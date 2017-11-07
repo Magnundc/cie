@@ -1,0 +1,13 @@
+#AuthName "Acesso restrito - Tecnologia da informação CREA-GO"
+#AuthType Basic
+#AuthBasicProvider dbm
+#AuthDBMGroupFile /var/apache_users/users_db
+#AuthDBMUserFile /var/apache_users/users_db
+#Require group cie
+
+
+AuthName "CREA-GO - Area de desenvolvimento"
+AuthType Basic
+#AuthUserFile /home/pass.txt
+AuthUserFile /home/passwd
+Require valid-user

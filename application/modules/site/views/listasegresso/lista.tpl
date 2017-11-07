@@ -18,6 +18,9 @@
             <th>cpf</th>
             <th>colacao</th>
             <th>cursos id</th>
+            <th>arquivos id</th>
+            <th>criado por</th>
+            <th>alterado por</th>
         </tr>
     </thead>
     <tfoot class="msg">
@@ -45,6 +48,9 @@
             <td >{{listasegress.cpf}}</td>
             <td >{{listasegress.colacao}}</td>
             <td >{{listasegress.cursos_id}}</td>
+            <td >{{listasegress.arquivos_id}}</td>
+            <td >{{listasegress.criado_por}}</td>
+            <td >{{listasegress.alterado_por}}</td>
         </tr>
     </tbody>
 </table>

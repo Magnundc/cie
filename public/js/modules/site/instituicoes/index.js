@@ -2,13 +2,14 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
     var $ = jQuery;
     var ng = $scope;
 
-    var limite = 10;
+    var limite = 15;
     var inicio = 0;
     var atual = 1;
     var total;
     var ordem = 'DESC';
-    var by = 'id';
-
+    var by = 'totalcursos';
+    
+    
     ng.reload = function(pg){
         atual = pg ? pg : 1;
         $http.get(base_url+'/instituicoes/total').success(function(data){
@@ -64,34 +65,52 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
             };
 
         };
-
+           
         $http.get(base_url+'/instituicoes/listar/'+limite+'/'+inicio+'/'+ordem+'/'+by+'/instituicoes').success(function(data){
             ng.lista = data;
             $timeout(function () {
                 ng.paginar(total, atual);
             }, 500);
         });
+        for (var i in ng.instituicoes){
+            $http.get(base_url+'/cursos/listar_cursos_json/'+ng.instituicoes[i].id).success(function(data){
+            ng.lista[i].totalcursos = data.length
+            
+            });
+            console.log(ng.lista[i].totalcursos);
+        } 
+        
     };
 
     ng.salvar = function(){
-        $.ajax({
-            url:base_url+'/instituicoes/salvar',
-            type:'post',
-            data:ng.instituicoe,
-            success:function(json){
-                if(json.result){
-                    $("#modal-form").modal("hide");
-                    $.dialogo_sucesso(json.message, 2000);
-                    ng.instituicoe = {};
-                    ng.reload(atual);
-                }else{
-                    $.dialogo_erro(json.message);
-                }
-            },
-            error:function(r){
-                $.dialogo_erro('Erro na estrutura dos dados.');
+        if(validar("frm-instituicoes")){//validação do formulário antes de salvar
+            if(ng.arquivos!=null){
+                ng.instituicoe.arquivos = ng.arquivos;
             }
-        });
+            $.ajax({
+                url:base_url+'/instituicoes/salvar',
+                type:'post',
+                data:ng.instituicoe,
+                success:function(json){
+                    console.log(json);
+                    if(json.result){
+                        $("#modal-form").modal("hide");
+                        $.dialogo_sucesso(json.message, 2000);
+//                        ng.instituicoe = {};
+//                        console.log(json);
+                        ng.instituicoe.id=json.id
+
+                    }else{
+                        $.dialogo_erro(json.message);
+                    }
+                },
+                error:function(r){
+                    $.dialogo_erro('Erro na estrutura dos dados.');
+                }
+            });
+            setTimeout(function () {window.location.replace(base_url+'/instituicoes/vertinstituicao/'+ng.instituicoe.id);}, 3000);
+        }
+        
     };
 
     ng.delete = function(){
@@ -131,41 +150,118 @@ app.controller("InstituicoesController", function($scope, $http, $timeout){
         $("#modal-delete").modal("show");
     };
     
-    ng.pesquisar = function(){
-        $("#lista").hide();
-        $("#pesquisa2").show();
-        $http.get(base_url+'/instituicoes/pesquisar/'+ng.form.pesquisa).success(function(json){
-            console.log(json);
+    ng.pesquisar = function(id){
+        
+        $http.get(base_url+'/instituicoes/pesquisa/'+id).success(function(json){
+            
             ng.dados = json;
-        })
+        });
     };
     
-    ng.verinstituicao = function(i){
-        ng.instituicoe = i;
-        var data = i.data_registro.split("-");
-        ng.instituicoe.data_registro = data[2] + "-" + data[1] + "-" + data[0];
-        $("#modal-form").modal("show");
-        
+    ng.openUpload = function () {
+        ng.msg = '';
+        $("#modal-upload").modal("show");
+        $("#upload").trigger("click");
+    };
+
+
+    ativaUpload = function () {
+        ng.upload = new Dropzone("div#upload", {
+            url: base_url + "/upload",
+            maxFilesize: 10, //3MB
+            maxFiles: 10,
+            uploadMultiple: false,
+            dictMaxFilesExceeded: 'É permitido enviar no máximo 10 arquivos',
+            dictRemoveFile: 'Remover',
+            addRemoveLinks: true,
+            accept: function (file, done) {
+                if (file.type != "application/pdf") {
+                    done("Formato de arquivo inválido, o arquivo deve ser anexado em formato PDF.");
+                } else {
+                    done();
+                }
+            },
+            init: function () {
+                this.on("success", function (file, json) {
+                    $timeout(function () {
+                        $('div.dz-success').remove();
+                        if (json.arquivos.nome) {
+                            console.log(json)
+                            ng.arquivos.push(json);
+                        }
+                        $timeout(function () {
+                            $("#modal-upload").modal("hide");
+                        }, 10);
+                    }, 500);
+                });
+            }
+        });
     };
     
-    ng.ocultapesquisa = function(){
-        $("#pesquisa2").hide();
-        
+    ng.excluirArquivo = function(item){
+        ng.item = item;
+        $("#modal-delete-arquivo").modal("show");
     };
     
-    ng.verlista = function(){
-        $("#lista").show();
-        $("#pesquisa2").hide();
-        
+    ng.removerArquivo = function(item) {
+        if(ng.arquivos[item].md5_nome != undefined){
+        var md5_nome = ng.arquivos[item].md5_nome;
+        var indice = item;
+        $.ajax({
+            url: base_url + '/remover/arquivos/' + md5_nome,
+            type: 'get',
+            success: function (data, textStatus, jqXHR) {
+                if (data.result) {
+                    $timeout(function () {
+                        ng.arquivos.splice(indice, 1);
+                    }, 100);
+                }
+            }
+        });
+        }else{
+        var md5_nome = ng.arquivos[item].arquivos.md5_nome;
+        var indice = item;
+        $.ajax({
+            url: base_url + '/remover/arquivos/' + md5_nome,
+            type: 'get',
+            success: function (data, textStatus, jqXHR) {
+                if (data.result) {
+                    $timeout(function () {
+                        ng.arquivos.splice(indice, 1);
+                    }, 100);
+                }
+            }
+        });
+        }
+        $("#modal-delete-arquivo").modal("hide");
     };
     
     var init = function(){
+        
+        $('#pesquisa').autocomplete({
+            
+            paramName: 'pesquisa',
+            serviceUrl: base_url + '/instituicoes/pesquisa',
+            transformResult: function (result) {
+                return {
+                    suggestions: $.map(JSON.parse(result), function (json) {
+                        return {data: json.id + '|' + json.nome, value: json.nome};
+                    })
+                };
+            },
+            onSelect: function (json) {
+                var tmp = json.data.split('|');
+               // ng.instituicoe.id = tmp[0];
+                location.href = base_url + '/instituicoes/vertinstituicao/' + tmp[0];
+
+            }
+        });
         getMask();
         ng.dados = {};
         ng.form = {};
-        ng.ocultapesquisa();
+        ativaUpload();
         ng.reload();
-        
+        ng.arquivos = [];
         ng.base_url=base_url;
     };
 

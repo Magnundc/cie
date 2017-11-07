@@ -1,25 +1,14 @@
 {literal}
+    
+    
+    
+    <table id="lista" class="table table-hover" >
 
-    
-    
-    <table class="table table-condensed table-bordered">
     <thead>
-        <tr>
-            <th class="min">
-                <span class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <i class="glyphicon glyphicon-menu-hamburger"></i>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li ng-click="incluir(instituicoe)"><a href="javascript:void(0)"><i class="icon-plus-2"></i> Incluir</a></a></li>
-                    </ul>
-                </span>
-            </th>
-            <th width="5%"><th>nome</th>
-            <th>nome abreviado</th>
-            <th>cidade</th>
-        </tr>
+            <th >Nome da Instituição</th>
+            <th >Nome abreviado</th>
+            <th >Cidade</th>
+        
     </thead>
     <tfoot class="msg">
         <tr>
@@ -28,22 +17,9 @@
     </tfoot>
     <tbody>
         <tr ng-repeat="instituicoe in lista">
-            <td class="center">
-                <span class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <i class="icon-cogs"></i>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li ng-click="editar(instituicoe)"><a href="javascript:void(0)"><i class="icon-pencil-4"></i> Editar</a></li>
-                        <li ng-click="excluir(instituicoe)"><a href="javascript:void(0)"><i class="icon-trashcan"></i> Excluir</a></li>
-                    </ul>
-                </div>
-            </span>
-        </td>
-            <td  class="right"><td >{{instituicoe.nome}}</td>
-            <td >{{instituicoe.nome_abreviado}}</td>
-            <td >{{instituicoe.cidade}}</td>
+            <td> <a href="instituicoes/vertinstituicao/{{instituicoe.id}}" style="color:black">{{instituicoe.nome}}</a></td>
+            <td > <a href="instituicoes/vertinstituicao/{{instituicoe.id}}" style="color:black">{{instituicoe.nome_abreviado}}</td>
+            <td > <a href="instituicoes/vertinstituicao/{{instituicoe.id}}" style="color:black">{{instituicoe.cidade}}</td>
             </tr>
     </tbody>
 </table>

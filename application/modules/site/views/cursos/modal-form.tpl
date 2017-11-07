@@ -3,9 +3,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
-                <h4 class="modal-title"><i class="glyphicon glyphicon-pencil"></i> Cadastro</h4>
+                <h4 class="modal-title"><i class="glyphicon glyphicon-pencil"></i> Cadastro de Cursos</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body h_550">
                 {include file="cursos/form.tpl"}
             </div>
             <div class="modal-footer">

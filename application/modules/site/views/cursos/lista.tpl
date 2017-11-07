@@ -1,5 +1,5 @@
 {literal}
-<table class="table table-condensed table-bordered">
+<table class="table table-hover">
     <thead>
         <tr>
             <th class="min">
@@ -14,14 +14,30 @@
                 </span>
             </th>
             <th width="5%">id</th>
-            <th>nome curso</th>
-            <th>titulo</th>
+            <th>instituicao id</th>
+            <th>cursosconfea id</th>
+            <th>titulosconfea id</th>
             <th>atribuicoes</th>
             <th>data rec mec</th>
             <th>data deferimento</th>
             <th>nivel</th>
             <th>data validade</th>
-            <th>instituicao id</th>
+            <th>reconhecimento</th>
+            <th>portaria reconhecimento</th>
+            <th>nome coordenador</th>
+            <th>telefone coordenador</th>
+            <th>email coordenador</th>
+            <th>endereco coordenacao</th>
+            <th>complemento endereco coordenacao</th>
+            <th>cep coordenacao</th>
+            <th>cidade coordenacao</th>
+            <th>estado coordenacao</th>
+            <th>criado por</th>
+            <th>data criacao</th>
+            <th>alterado por</th>
+            <th>usr sic</th>
+            <th>data alteracao</th>
+            <th>arquivos id</th>
         </tr>
     </thead>
     <tfoot class="msg">
@@ -45,14 +61,30 @@
             </span>
         </td>
             <td  class="right">{{curso.id}}</td>
-            <td >{{curso.nome_curso}}</td>
-            <td >{{curso.titulo}}</td>
+            <td >{{curso.instituicao_id}}</td>
+            <td >{{curso.cursosconfea_id}}</td>
+            <td >{{curso.titulosconfea_id}}</td>
             <td >{{curso.atribuicoes}}</td>
             <td >{{curso.data_rec_mec}}</td>
             <td >{{curso.data_deferimento}}</td>
             <td >{{curso.nivel}}</td>
             <td >{{curso.data_validade}}</td>
-            <td >{{curso.instituicao_id}}</td>
+            <td >{{curso.reconhecimento}}</td>
+            <td >{{curso.portaria_reconhecimento}}</td>
+            <td >{{curso.nome_coordenador}}</td>
+            <td >{{curso.telefone_coordenador}}</td>
+            <td >{{curso.email_coordenador}}</td>
+            <td >{{curso.endereco_coordenacao}}</td>
+            <td >{{curso.complemento_endereco_coordenacao}}</td>
+            <td >{{curso.cep_coordenacao}}</td>
+            <td >{{curso.cidade_coordenacao}}</td>
+            <td >{{curso.estado_coordenacao}}</td>
+            <td >{{curso.criado_por}}</td>
+            <td >{{curso.data_criacao}}</td>
+            <td >{{curso.alterado_por}}</td>
+            <td >{{curso.usr_sic}}</td>
+            <td >{{curso.data_alteracao}}</td>
+            <td >{{curso.arquivos_id}}</td>
         </tr>
     </tbody>
 </table>

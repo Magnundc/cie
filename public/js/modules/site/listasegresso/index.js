@@ -15,6 +15,12 @@ app.controller("ListasegressoController", function($scope, $http, $timeout){
         });
     };
 
+    var loadArquivos = function(){
+        $http.get(base_url+'/arquivos/listar/1000/0/ASC/id/arquivos').success(function(data){
+            ng.arquivos = data;
+        });
+    };
+
     ng.reload = function(pg){
         atual = pg ? pg : 1;
         $http.get(base_url+'/listasegresso/total').success(function(data){
@@ -140,6 +146,7 @@ app.controller("ListasegressoController", function($scope, $http, $timeout){
         ng.reload();
         ng.base_url=base_url;
         loadCursos();
+        loadArquivos();
     };
 
     init();

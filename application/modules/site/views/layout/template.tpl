@@ -32,8 +32,7 @@
             <!-- Toast message -->
             <link rel="stylesheet" href="{base_url}/public/componentes/toast-message/src/main/resources/css/jquery.toastmessage.css" />
 
-            <!-- Custom CSS -->
-            <link href="{base_url}/public/css/estilo.css" rel="stylesheet" type="text/css">
+            
 
             <!-- jQuery -->
             <script src="{base_url}/public/componentes/sb/bower_components/jquery/dist/jquery.min.js"></script>
@@ -67,38 +66,65 @@
             <!-- Jquery Ui -->
             <script src="{base_url}/public/componentes/jquery-ui-1.11.4/jquery-ui.js" type="text/javascript"></script>
             <script type="text/javascript" src="{base_url}/public/componentes/jquery/jquery.ui.touch-punch.min.js"></script>
-
+            
+            <!-- Custom CSS -->
+            <link href="{base_url}/public/css/estilo.css" rel="stylesheet" type="text/css">
+            
+            <!-- Nav -->                
+            <script src="{base_url}/public/js/nav.js"></script>     
+            
+            <!-- Bowser -->
+            <script type="text/javascript" src="{base_url}/public/componentes/bowser/src/bowser.js"></script>
+            
             <script>
                 var base_url = "{base_url}";
             </script>
         </head>
         <body ng-app="app">
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+         <nav ng-controller="NavController" class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+             <div class="navbar-header col-xs-12 col-md-12">
+                
+                <div class="col-xs-12 col-md-9"> <a class="navbar-brand" href="{base_url}/instituicoes"><i class="fa fa-graduation-cap" aria-hidden="true"></i> CIE - Cadastro de Instituição de Ensino</a></div>
+                
+                <div class="col-xs-12 col-md-3"> <img src="/cie/public/imagens/logo_crea1.png" alt="Crea-GO"></div>
+                
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand" href="{base_url}/">CIE - Cadastro de Instituição de Ensino</a>
-        </div>
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
+                
+             </div>
+            <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse" id="menu">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="instituicoes"><i class="glyphicon glyphicon-chevron-right"></i> Insituições</a>
-                        <a href="contatos"><i class="glyphicon glyphicon-chevron-right"></i> Contatos</a>
-                        <a href="cursos"><i class="glyphicon glyphicon-chevron-right"></i> Cursos</a>
-                        <a href="grades"><i class="glyphicon glyphicon-chevron-right"></i> Grades</a>
-                        <a href="listasegresso"><i class="glyphicon glyphicon-chevron-right"></i> Listas de Egressos</a>
+                        <a class="menuprincipal" href="/cie/instituicoes"><i class="glyphicon glyphicon-home"></i> Instituições</a>
+                        {*<a class="menuprincipal" href="/cie/recadastramentos"><i class="glyphicon glyphicon-chevron-right"></i> Recadastramentos</a>
+                        <a class="menuprincipal" href="/cie/cursos"><i class="glyphicon glyphicon-chevron-right"></i> Cursos</a>
+                        <a class="menuprincipal" href="/cie/historicodecisoes"><i class="glyphicon glyphicon-chevron-right"></i> Histórico de Decisões</a>
+                        <a class="menuprincipal" href="/cie/listasegresso"><i class="glyphicon glyphicon-chevron-right"></i> Listas de Egressos</a>*}
+                        {if $smarty.session.logado->master or $smarty.session.logado->admin or $smarty.session.logado->lista_egresso}<a class="menuprincipal" href="/cie/contatos"><i class="glyphicon glyphicon-list"></i> Contatos</a>
+                        <a class="menuprincipal" href="/cie/diplomasnaoreconhecidos"><i class="glyphicon glyphicon-thumbs-down"></i> Diplomas não autênticos</a>
+                        <a class="menuprincipal" href="/cie/contatoscrea"><i class="glyphicon glyphicon-th-list"></i> Contatos CREAS</a>
+                        <a class="menuprincipal" href="/cie/comunicado"><i class="glyphicon glyphicon-bullhorn"></i> Comunicados</a>
+                        {if $smarty.session.logado->master}<a class="menuprincipal" href="/cie/titulosconfea"><i class="glyphicon glyphicon-th-large"></i> Títulos Confea</a>{/if}
+                        {if $smarty.session.logado->master}<a class="menuprincipal" href="/cie/cursosconfea"><i class="glyphicon glyphicon-education"></i> Cursos Confea</a>{/if}
+                        {*<a class="menuprincipal" href="/cie/titulosconfea"><i class="glyphicon glyphicon-chevron-right"></i> Títulos Confea</a>
+                        <a class="menuprincipal" href="/cie/cursosconfea"><i class="glyphicon glyphicon-chevron-right"></i> Cursos Confea</a>*}
+                        {if $smarty.session.logado->master}<a class="menuprincipal" href="/cie/colaboradores"><i class="glyphicon glyphicon-user"></i> Colaboradores</a>
+                        {*<a class="menuprincipal" href="/cie/arquivos"><i class="glyphicon glyphicon-chevron-right"></i> Arquivos</a>*}
+                        <a class="menuprincipal" href="/cie/log"><i class="glyphicon glyphicon-list-alt"></i> Relatórios</a>
+                        <a class="menuprincipal" href="/cie/log"><i class="glyphicon glyphicon-time"></i> Log</a>{/if}{/if}
+                        <a class="menuprincipal" href="javascript:;" ng-click="logout()" data-toggle="tooltip" data-placement="top" title="Logout"><i class="glyphicon glyphicon-off"></i> Sair</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+     </nav>
     <div id="wrapper">
-        <div id="page-wrapper">
+        <div id="page-wrapper" style="border: none">
             <div class="container-fluid">
                 <div class="v_space">{block name="conteudo"}{/block}</div>
             </div>

@@ -1,0 +1,61 @@
+#logo{
+    width: 50px;
+    float: left;
+}
+
+.cabecalho{
+    font-size: 0.8em;
+}
+
+thead th{
+    font-size: 0.7em;
+}
+
+.upper{
+    text-transform: uppercase;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.left{
+    text-align: left;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+tbody td{
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(odd) {
+   background-color: #f5f5f5;
+}
+
+.tbl_footer{
+    font-size: 0.8em;
+}
+
+.center{
+    text-align: center !important;
+}
+
+.head{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+body{
+    background-image: url('public/imagens/fundo2.jpg');
+    background-position: center;
+    
+}

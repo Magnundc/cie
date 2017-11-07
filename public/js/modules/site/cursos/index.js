@@ -15,6 +15,24 @@ app.controller("CursosController", function($scope, $http, $timeout){
         });
     };
 
+    var loadCursosconfea = function(){
+        $http.get(base_url+'/cursosconfea/listar/1000/0/ASC/id/cursosconfea').success(function(data){
+            ng.cursosconfea = data;
+        });
+    };
+
+    var loadTitulosconfea = function(){
+        $http.get(base_url+'/titulosconfea/listar/1000/0/ASC/id/titulosconfea').success(function(data){
+            ng.titulosconfea = data;
+        });
+    };
+
+    var loadArquivos = function(){
+        $http.get(base_url+'/arquivos/listar/1000/0/ASC/id/arquivos').success(function(data){
+            ng.arquivos = data;
+        });
+    };
+
     ng.reload = function(pg){
         atual = pg ? pg : 1;
         $http.get(base_url+'/cursos/total').success(function(data){
@@ -136,10 +154,14 @@ app.controller("CursosController", function($scope, $http, $timeout){
     };
 
     var init = function(){
+        $('.menuprincipal:eq(0)').attr('style', 'background-color: white !important; color: black');
         getMask();
         ng.reload();
         ng.base_url=base_url;
         loadInstituicoes();
+        loadCursosconfea();
+        loadTitulosconfea();
+        loadArquivos();
     };
 
     init();

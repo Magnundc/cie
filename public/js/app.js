@@ -45,6 +45,19 @@ app.filter('formatarHora', function () {
     };
 });
 
+app.filter('formatarDataHora', function () {
+    return function (date) {
+        if (date) {
+            var d = date.split(" ");
+            var data = d[0].split("-");
+            var hora = d[1].split(":");
+            return data[2] + "-" + data[1] + "-" + data[0] + ":" +hora[0] + "h" + hora[1];
+        } else {
+            return "";
+        }
+    };
+});
+
 app.filter('moeda', function () {
     return function (text) {
         if (text) {

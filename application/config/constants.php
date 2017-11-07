@@ -38,10 +38,17 @@ define('FOPEN_WRITE_CREATE', 'ab');
 define('FOPEN_READ_WRITE_CREATE', 'a+b');
 define('FOPEN_WRITE_CREATE_STRICT', 'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT', 'x+b');
+//define('base_url', "http://www.crea-go.org.br/cie");
 
-define('base_url', "http://".$_SERVER['SERVER_NAME']."/cie");
-
-//define('base_url', "http://localhost/cie");
+if(isset($_SERVER['HTTP_X_FORWARDED_HOST'])){
+    if($_SERVER['HTTP_X_FORWARDED_HOST']=="www.crea-go.org.br"){
+        define('base_url', "http://www.crea-go.org.br/cie");
+    }else{
+        define('base_url', "http://".$_SERVER['SERVER_NAME']."/cie");
+    }
+}else{
+    define('base_url', "http://".$_SERVER['SERVER_NAME']."/cie");    
+}
 
 
 /* End of file constants.php */

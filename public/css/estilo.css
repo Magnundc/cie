@@ -2,7 +2,7 @@
 @import url("application.css");
 
 .v_space{
-    margin-top: 5px;
+    margin-top: 05px;
 }
 
 .container{
@@ -55,4 +55,271 @@ nav li{
 
 .receita{
     color: green;
+}
+
+#form-wide{
+    width: 100%;
+}
+
+.form-control-center {
+    width: 100%;
+    height: 34px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.colunas_form {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+.for_wide{
+    width: 100%;
+}
+
+
+
+.panel-heading{
+    color: #333;
+    background-color: #fff !important;
+    border-color: rgba(231, 231, 231, 0);
+}
+
+.navbar-default{
+    font-family: arial;
+    color: white !important;
+    background-color: #000321 !important;
+    border-color: rgba(231, 231, 231, 0);
+}
+
+.navbar-brand{
+    color: white !important;
+}
+
+
+
+.menuprincipal{
+    font-family: arial;
+    color: white;
+    background-color: #000321 !important;
+}
+.menuprincipal.active{
+    color: black !important;
+    background-color: white !important;
+}
+.menuprincipal:hover{
+    color: black !important;
+    background-color: white !important;
+}
+
+
+
+.sidebar ul li {
+    border-bottom: 0px !important;
+}
+
+.sidebar ul li a.active {
+    color: black;
+    background-color: #fff;
+}
+
+.sidebar ul li a{
+    color: white;
+    background-color: #000321 !important;
+}
+
+body {
+    background-color: #000321 !important;
+}
+
+table {
+    font-family: arial;
+}    
+
+btn, a, btn-primary, button, input, textarea, th, thead{
+    font-family: arial !important;
+}
+
+.btn-primary{
+    color: black;
+    background-color: white !important;
+    border-radius: 0px !important;
+    border-color: black;
+}
+
+.btn-primary:hover{
+    color: white;
+    background-color: #000321 !important;
+}
+
+.btn-primary:visited{
+    color: black;
+    background-color: white !important;
+    border-radius: 0px !important;
+    border-color: black;
+}
+
+.btn-primary:visited:hover{
+    color: white;
+    background-color: #000321 !important;
+}
+
+.btn-primary:active{
+    color: black;
+    background-color: white !important;
+    border-radius: 0px !important;
+    border-color: black;
+}
+
+panel-body, container{
+    border: 0px !important;
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+.panel-footer {
+    height: auto !important;
+    
+}
+
+.modal-dialog {
+    width: 80%;
+    margin: auto !important;
+}
+
+
+
+.autocomplete-suggestions { 
+    border: 1px solid #999; 
+    background: #FFF; 
+    overflow: auto
+}
+
+.autocomplete-suggestion { 
+    padding: 2px 5px; 
+    white-space: nowrap; 
+    overflow: hidden
+}
+.autocomplete-selected { 
+    background: #F0F0F0; 
+}
+
+.autocomplete-suggestions strong { 
+    font-weight: bold;
+    color: #3399FF
+}
+.autocomplete-group { 
+    padding: 2px 5px;
+}
+
+.autocomplete-group strong {
+    display: block;
+    border-bottom: 1px solid #000
+}
+
+.pagination .atual {
+    background-color: #CCCCCC !important;
+    color: black;
+    font-weight: bold;
+}
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    z-index: 2;
+    color: black !important;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: none;
+}
+
+table thead th {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    color: #555;
+    text-shadow: 0 1px 1px #ffffff;
+    font-family: arial;
+    background-color: white;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: none; 
+}
+
+a.visual{
+    background-color: white !important;
+    color: black;
+}
+i.fa-graduation-cap{
+    font-size: 40px !important;
+    vertical-align: -10px !important;
+}
+
+.navbar-brand{
+    vertical-align: middle !important;
+    padding: 1px 1px !important;
+}
+
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #000;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs>li>a {
+    color: #a2a2a2;
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+.panel-default {
+    border-color: none !important;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }

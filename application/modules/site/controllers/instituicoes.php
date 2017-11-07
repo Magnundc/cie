@@ -2,7 +2,7 @@
 
 (defined('BASEPATH')) OR exit('Acesso direto ao script não permitido'); 
 
-class Instituicoes extends MX_Controller{
+class Instituicoes extends MX_Security{
 
     function __construct() {
         parent::__construct();
@@ -12,17 +12,23 @@ class Instituicoes extends MX_Controller{
     }
 
     public function index(){
-        $this->parser->parse("instituicoes/index");
+       $this->parser->parse("instituicoes/index");
     }
 
     public function salvar(){
-        header('Content-type: application/json');
-        $this->load->helper("data");
-        $dados = $this->params();
-        $dados["data_registro"] = Data_helper::inverter($dados["data_registro"]);
-        $result = $this->model->salvar($dados);
-        echo json_encode($result);
-    }
+        if(parent::ismaster() or parent::isadmin()){
+            header('Content-type: application/json');
+            $this->load->helper("data");
+            $dados = $this->params();
+            $params = $this->params();
+            $dados["data_registro"] = Data_helper::inverter($dados["data_registro"]);
+//            print_r($params['arquivos']);
+//            exit();
+            $result = $this->model->salvar($dados);
+            echo json_encode($result);
+            
+        }
+        }
 
     public function excluir(){
         header('Content-type: application/json');
@@ -40,16 +46,38 @@ class Instituicoes extends MX_Controller{
         echo json_encode($dados);
     }
     
-     public function verinstituicao(){
+    public function carregar(){
         header('Content-type: application/json');
-        $dados = $this->model->carregar($this->params[3], $this->params[4], $this->params[5], $this->params[6]);
+        $dados = $this->model->carregar($this->params[3]);
         echo json_encode($dados);
     }
     
-    public function pesquisar(){
+    public function verinstituicao(){
+        $dados["id"] = $this->params[3];
+        $this->parser->parse("instituicoes/ver",$dados);
+    }
+    
+    public function pesquisa(){
         header('Content-type: application/json');
-        $dados = $this->model->pesquisa($this->params[3]);
+        header('Access-Control-Allow-Origin: *');//pode ser retirado
+        $termo = $this->params();
+        $dados = $this->model->pesquisa($termo["pesquisa"]);
+        echo json_encode($dados);
+        
+    }
+    
+    public function traducao() {
+        header('Content-type: application/json');
+        $dados = $this->model->getNivel();
         echo json_encode($dados);
     }
-
+    
+    public function logout() {
+        session_destroy();
+        $this->parser->parse("layout/template");
+    }
+    
+    public function getLastid() {
+        return $this->db->insert_id();
+    }
 }

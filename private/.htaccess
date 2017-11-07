@@ -9,5 +9,5 @@
 AuthName "CREA-GO - Area de desenvolvimento"
 AuthType Basic
 #AuthUserFile /home/pass.txt
-AuthUserFile /home/passwd
+AuthUserFile /private/passwd
 Require valid-user

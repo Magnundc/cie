@@ -371,3 +371,6 @@ $config['proxy_ips'] = '';
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
+
+
+$config['sess_save_path'] = sys_get_temp_dir();

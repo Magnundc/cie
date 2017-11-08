@@ -1,11 +1,10 @@
 <IfModule mod_rewrite.c>
- RewriteEngine On
- RewriteRule ^([^/]+) index.php?id=$1 [L]
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php?/$1 [L]
 </IfModule>
-
-RewriteEngine On
-RewriteCond %{REQUEST_URI} !^/curation\.php
-RewriteRule ^([^/]*)$ /curation.php?id=$1 [L]
 
 #AuthName "Acesso restrito - Tecnologia da informação CREA-GO"
 #AuthType Basic

@@ -1,17 +1,15 @@
-<IfModule mod_rewrite.c>
-  Options +FollowSymlinks
-  RewriteEngine on
-  RewriteBase /
+RewriteEngine on
 
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ /index.php?/$1 [L]
-</IfModule>
+# uncomment the following lines to force HTTPS
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
-<IfModule !mod_rewrite.c>
-    # If we don't have mod_rewrite installed, all 404's
-    # can be sent to index.php, and everything works as normal.
-    # Submitted by: ElliotHaughin
+# removes trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [L,R=301]
 
-    ErrorDocument 404 /index.php
-</IfModule> 
+# remove index.php from URL
+RewriteCond $1 !^(index\.php|assets|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/$1 [L]
